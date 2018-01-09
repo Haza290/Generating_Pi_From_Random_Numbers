@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class Main {
 	
-	// 2147483647 is the largest int value
-	int UPPER_RAND = 2147483647;
 	int ITERATION_LIMIT = 1000000;
 	
 	int iterationCount;
@@ -24,8 +22,8 @@ public class Main {
 		while (iterationCount < ITERATION_LIMIT) {
 			iterationCount ++;
 			
-			int x = rand.nextInt(UPPER_RAND);
-			int y = rand.nextInt(UPPER_RAND);
+			int x = rand.nextInt(Integer.MAX_VALUE);
+			int y = rand.nextInt(Integer.MAX_VALUE);
 			
 			if(areCoprime(x,y)) {
 				coprimeCount ++;
